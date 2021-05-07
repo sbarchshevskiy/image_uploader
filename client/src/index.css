@@ -11,3 +11,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.image-display{
+    display: grid;
+    margin-top: 40px;
+    margin-left: 25px;
+    margin-right: 25px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 25px;
+}
+
+.image-display-table{
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    padding: 50%;
+    /*opacity: 0.8;*/
+}
+
+.image-display-table img{
+    position: absolute;
+    min-width: 100%;
+    max-width: 125%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+}
