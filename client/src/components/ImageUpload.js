@@ -1,11 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function ImageUpload() {
-  return(
 
+  const [file, setFile] = useState(null);
+  const [errorMessage, setErrorMessage] = useState(null)
+
+  //verifies if the file is an image property
+  const allowedFileType = ["image/jpeg", "image/png"];
+
+  const browseFiles = (event) => {
+    //select only one file [0]
+    let chosenFile = event.target.files[0];
+    if(chosenFile && allowedFileType.includes(chosenFile.type)) {
+      setFile(chosenFile);
+      setErrorMessage('');
+    } else {
+      //in case if wrong type, or not selected
+      setFile(null);
+      setErrorMessage('only "png" or "jpeg" formats are accepted');
+    }
+  }
+  return(
     <div>
       <form>
-        <input type="file"/>
+        <input type="file" onChange={browseFiles}/>
+        <div className="file-output">
+          { errorMessage && <div className="error-message">{errorMessage}</div> }
+          { file && <div>{ file.name }</div> }
+        </div>
       </form>
     </div>
   )
