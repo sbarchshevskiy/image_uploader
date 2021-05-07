@@ -18,6 +18,7 @@ firebase.initializeApp(firebaseConfig);
 
 const backendStorage = firebase.storage();
 const backendFirestore = firebase.firestore();
+const timestamp = firebase.firestore.FieldValue.serverTimestamp;
 
 export default firebase;
-export {backendFirestore, backendStorage};
+export {backendFirestore, backendStorage, timestamp };

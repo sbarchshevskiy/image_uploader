@@ -1,5 +1,5 @@
 import { useState, useEffect } from  'react';
-import { backendStorage } from "../firebaseConfig/config";
+import { backendStorage, backendFirestore, timestamp } from "../firebaseConfig/config";
 
 export default function useFbStorage(file) {
   const [uploadStatus, setUploadStatus] = useState(0);
@@ -8,6 +8,8 @@ export default function useFbStorage(file) {
 
   useEffect(() => {
     const filesReference = backendStorage.ref(file.name);
+    const imageRepo = backendFirestore.collection('pics');
+
     filesReference.put(file).on('state_changed', (storageState) => {
       let uploadProgress = (storageState.bytesTransferred / storageState.totalBytes) * 100;
       setUploadStatus(uploadProgress);
@@ -16,6 +18,8 @@ export default function useFbStorage(file) {
       console.log('error', error);
     }, async () => {
       const url =  await filesReference.getDownloadURL();
+      const createdAt = timestamp();
+      await imageRepo.add({ url, createdAt })
       setImageUrl(url);
     });
   }, [file]);
