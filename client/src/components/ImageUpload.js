@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import FileUploadStatus from "./FileUploadStatus";
 
 export default function ImageUpload() {
 
@@ -27,6 +28,7 @@ export default function ImageUpload() {
         <div className="file-output">
           { errorMessage && <div className="error-message">{errorMessage}</div> }
           { file && <div>{ file.name }</div> }
+          { file && <FileUploadStatus file={file} setFile={setFile}/> }
         </div>
       </form>
     </div>
