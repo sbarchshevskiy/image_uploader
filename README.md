@@ -5,20 +5,16 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version : 3.0.0
 
 * System dependencies
 
-* Configuration
+* Configuration: run `budle install` at the root. Once complete `cd client` and `npm install`
 
-* Database creation
+* Database creation/initialization: run `rails db:migrate` at the root. Start server `rails s -p 3001`
 
-* Database initialization
+* Launch the app: `cd client` and `npm start`
 
-* How to run the test suite
+* How to run the test suite: rspec coming soon
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
