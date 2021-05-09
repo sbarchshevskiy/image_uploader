@@ -37,3 +37,9 @@ code {
     top: 0;
     left: 0;
 }
+
+.image-delete-button{
+    position: relative;
+    display: grid;
+
+}
