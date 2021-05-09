@@ -7,6 +7,10 @@ Things you may want to cover:
 
 * Ruby version : 3.0.0
 
+* Rails version: 6.1.3.1
+
+* Node version: 15.11.0
+
 * System dependencies
 
 * Configuration: run `budle install` at the root. Once complete `cd client` and `npm install`

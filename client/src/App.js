@@ -1,11 +1,13 @@
 import ImageUpload from "./components/ImageUpload";
-import * as firebase from "firebase";
 import DisplayImages from "./components/DisplayImages";
+import Auth from "./components/authentication/Auth";
 
 function App() {
   return (
 
   <div className="App">
+
+    <Auth/>
     <ImageUpload />
     <DisplayImages />
     </div>

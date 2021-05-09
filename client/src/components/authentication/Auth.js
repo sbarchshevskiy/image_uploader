@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
-import Main from "./components/Main";
-import Nav from "./components/Nav";
-import Login from "./components/Login";
+import Main from "./Main";
+import Nav from "./Nav";
+import Login from "./Login";
 import axios from 'axios';
 
 
-export default class App extends Component{
+export default class Auth extends Component{
   constructor() {
     super();
 
