@@ -11,7 +11,9 @@ Things you may want to cover:
 
 * Node version: 15.11.0
 
-* System dependencies
+* Client-side dependencies: firebase, firestore, react-dom, axios, cypress.
+
+* Server-side dependencies: Bcrypt, rspec
 
 * Configuration: run `budle install` at the root. Once complete `cd client` and `npm install`
 
@@ -19,6 +21,6 @@ Things you may want to cover:
 
 * Launch the app: `cd client` and `npm start`
 
-* How to run the test suite: rspec coming soon
+* How to run the test suite: rspec and cypress work in progress
 
 
