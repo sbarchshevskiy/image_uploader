@@ -1,9 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+Use of cloud services to store upstream user data, and an independent authentication rails server to store sensitive user-data.
 
 * Ruby version : 3.0.0
 
@@ -23,4 +20,5 @@ Things you may want to cover:
 
 * How to run the test suite: rspec and cypress work in progress
 
+### .. - / ..-. .-.. . .-- / ..- -. -.. . .-. / - .... . / .-. .- -.. .- .-.
 
