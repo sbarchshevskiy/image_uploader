@@ -15,7 +15,11 @@ function App() {
     <Auth/>
     <ImageUpload />
     <DisplayImages setSelectedImage={setSelectedImage}/>
-    <ModalDisplay selectedImage={selectedImage}/>
+    { selectedImage &&
+    <ModalDisplay
+      selectedImage={selectedImage}
+      setSelectedImage={setSelectedImage}
+    /> }
     </div>
   );
 }
